@@ -31,7 +31,7 @@ let package = Package(
             name: "SensorsAnalyticsSDK",
             dependencies: ["SensorsAnalyticsExtension"],
             path: "SensorsAnalyticsSDK",
-            exclude: ["Core/SAAppExtensionDataManager.m", "CAID", "WebView"],
+            exclude: ["Core/SAAppExtensionDataManager.m", "CAID", "WebView", "Location"],
             resources: [.copy("SensorsAnalyticsSDK.bundle")],
             publicHeadersPath: "modulemap",
             cSettings: [
@@ -62,7 +62,7 @@ let package = Package(
                 .headerSearchPath("DeviceOrientation"),
                 .headerSearchPath("Encrypt"),
                 .headerSearchPath("Exception"),
-                .headerSearchPath("Location"),
+                // .headerSearchPath("Location"),
                 .headerSearchPath("JSBridge"),
                 .headerSearchPath("RemoteConfig"),
                 .headerSearchPath("Visualized"),
